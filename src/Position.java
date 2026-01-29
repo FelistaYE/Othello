@@ -1,5 +1,3 @@
-
-
 public class Position {
 
     private final int row;
@@ -11,16 +9,13 @@ public class Position {
     }
 
     public int getRow() {
-
         return row;
     }
 
     public int getColumn() {
-
         return column;
     }
 
-    // For debugging and printing
     @Override
     public String toString() {
         return "Position{" +
