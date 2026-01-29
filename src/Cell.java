@@ -13,32 +13,26 @@ public class Cell {
     }
 
     public static Cell empty() {
-
         return new Cell(EMPTY);
     }
 
     public static Cell white() {
-
         return new Cell(WHITE);
     }
 
     public static Cell black() {
-
         return new Cell(BLACK);
     }
 
     public boolean isEmpty() {
-
         return state == EMPTY;
     }
 
     public boolean isWhite() {
-
         return state == WHITE;
     }
 
     public boolean isBlack() {
-
         return state == BLACK;
     }
 
