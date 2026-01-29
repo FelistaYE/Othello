@@ -31,81 +31,78 @@ public class Board {
         }
 
         int central = order - 1;
-
         cells[central][central] = Cell.white();
         white++;
+    
         if(display != null) display.setWhite(new Position(central, central));
-
+        
         cells[central+1][central+1] = Cell.white();
         white++;
+        
         if(display != null) display.setWhite(new Position(central+1, central+1));
-
+        
         cells[central+1][central] = Cell.black();
         black++;
+        
         if(display != null) display.setBlack(new Position(central+1, central));
-
+        
         cells[central][central+1] = Cell.black()    ;
         black++;
+        
         if(display != null) display.setBlack(new Position(central, central+1));
     }
 
 
     public int size() {
-
         return 2 * order;
     }
 
     public boolean contains(Position position) {
         int X = position.getRow();
         int Y = position.getColumn();
-
         return X >= 0 && X < size() && Y >= 0 && Y < size();
     }
 
     public boolean isEmpty(Position position) {
         if (!contains(position)) return false;
-
         return cells[position.getRow()][position.getColumn()].isEmpty();
     }
 
     public boolean isWhite(Position position) {
         if(!contains(position)) return false;
-
         return cells[position.getRow()][position.getColumn()].isWhite();
     }
 
     public boolean isBlack(Position position) {
         if(!contains(position)) return false;
-
         return cells[position.getRow()][position.getColumn()].isBlack();
     }
 
     public void setWhite(Position position) {
         if(!contains(position) || !isEmpty(position)) return;
+        
         cells[position.getRow()][position.getColumn()].setWhite();
         white++;
-
-        // interfaz gráfica (pàgina 17)
+        
         if (display != null) display.setWhite(position);
     }
 
     public void setBlack(Position position) {
         if(!contains(position) || !isEmpty(position)) return;
+        
         cells[position.getRow()][position.getColumn()].setBlack();
         black++;
 
-        // interfaz gráfica (pàgina 17)
         if (display != null) display.setBlack(position);
 
     }
 
     public void reverse(Position position) {
+        
         if(!contains(position) || isEmpty(position)) return;
-
 
         Cell cell = cells[position.getRow()][position.getColumn()];
         boolean colorW = cell.isWhite();
-
         cell.reverse();
 
         if(colorW){
@@ -117,7 +114,6 @@ public class Board {
             black--;
         }
 
-        // interfaz gráfica (pàgina 17)
         if (display != null){
             if(colorW) display.setBlack(position);
             else display.setWhite(position);
