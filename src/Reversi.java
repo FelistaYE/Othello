@@ -1,19 +1,14 @@
-
 import acm.program.GraphicsProgram;
 import acm.program.ProgramMenuBar;
-
 import java.awt.event.MouseEvent;
 
 public class Reversi extends GraphicsProgram {
 
     public static final int APPLICATION_HEIGHT = 600;
     public static final int APPLICATION_WIDTH  = 600;
-
     private static final double BOARD_PADDING = 0.03;
     private static final double CELL_PADDING = 0.10;
-
     private static final int ORDER = 4;
-
     private Game game;
     private Display display;
 
@@ -40,7 +35,6 @@ public class Reversi extends GraphicsProgram {
 
     @Override
     protected ProgramMenuBar createMenuBar() {
-        // To remove the menu bar on windows
         return null;
     }
 
