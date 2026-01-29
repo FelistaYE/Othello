@@ -1,5 +1,3 @@
-
-
 public class Direction {
 
     public static final Direction N  = new Direction(-1,  0);
@@ -24,7 +22,6 @@ public class Direction {
     }
 
     public Position move(Position position) {
-
         return new Position(position.getRow() + changeInRow , position.getColumn() + changeInColumn);
     }
 }
