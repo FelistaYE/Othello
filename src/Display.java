@@ -1,13 +1,10 @@
-
 import acm.graphics.*;
-
 import java.awt.*;
 
 public class Display {
 
     private final Color SIDE_COLOR = new Color(172, 133, 25);
     private final Color CENTER_COLOR = new Color(73, 179, 24);
-
     private final Geometry geometry;
     private final GCanvas gcanvas;
 
@@ -30,7 +27,7 @@ public class Display {
         board.setFilled(true);
         board.setColor(CENTER_COLOR);
         gcanvas.add(board);
-        board.sendToBack(); // TODO: The first four cells do not show if not
+        board.sendToBack(); 
     }
 
     private void showLines() {
