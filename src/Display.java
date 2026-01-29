@@ -3,8 +3,8 @@ import java.awt.*;
 
 public class Display {
 
-    private final Color SIDE_COLOR = new Color(172, 133, 25);
-    private final Color CENTER_COLOR = new Color(73, 179, 24);
+    private final Color SIDE_COLOR = new Color(23, 32, 42);
+    private final Color CENTER_COLOR = new Color(52, 73, 94);
     private final Geometry geometry;
     private final GCanvas gcanvas;
 

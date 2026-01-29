@@ -1,6 +1,7 @@
 # Description
 
 This project implements the Reversi board game, a strategy game for two players where the goal is to have more pieces of your color at the end of the game. Players place pieces on the board and capture opponent pieces by surrounding them in any direction (horizontal, vertical, or diagonal).
+
 # Othello Rules
 
 1. The game is played on an 8x8 board.
@@ -11,18 +12,6 @@ This project implements the Reversi board game, a strategy game for two players 
 6. If you cannot make any valid move, you pass your turn.
 7. The game ends when no player can move.
 8. The player with more pieces of their color wins.
-
-# How to Play
-
-1. Run the program.
-2. The board initializes with 4 pieces in the center (2 black and 2 white).
-3. Black moves first.
-4. Click on an empty square to place a piece.
-5. The game only allows valid moves that capture at least one opponent piece.
-6. If a player cannot make any move, the turn passes to the other player.
-7. The game ends when neither player can make moves.
-8. The player with more pieces of their color wins.
-
 
 # Requirements
 
@@ -44,6 +33,8 @@ Download the `acm.jar` file from one of these sources:
 - **Direct link**: https://cs.stanford.edu/people/eroberts/jtf/acm.jar
 - **Official website**: [Stanford ACM Java Task Force](https://cs.stanford.edu/people/eroberts/jtf/)
 
+Place the acm.jar file in the `src` folder.
+
 # Configuration
 
 You can customize various aspects of the game by modifying constants in `Reversi.java`:
@@ -54,8 +45,8 @@ You can customize various aspects of the game by modifying constants in `Reversi
 - `ORDER`: Board order (default: 4, creating an 8x8 board)
 
 Customizable colors in `Display.java`:
-- `SIDE_COLOR`: Border color (default: brown - RGB(172, 133, 25))
-- `CENTER_COLOR`: Board color (default: green - RGB(73, 179, 24))
+- `SIDE_COLOR`: Border color (default: gray-blue - RGB(23, 32, 42))
+- `CENTER_COLOR`: Board color (default: steel Blue - RGB(52, 73, 94))
 
 # Other Languages
 
