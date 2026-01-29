@@ -1,4 +1,3 @@
-
 public class Game {
 
     private final Board board;
@@ -6,13 +5,10 @@ public class Game {
 
     public Game(Board board) {
         this.board = board;
-        // Suponemos que el jugador con las fichas negras puede hacer la primera jugada
-        // (es decir, el tablero es de orden como mínimo 2)
         this.state = State.BLACK;
     }
 
     public boolean isFinished() {
-
         return state == State.FINISHED;
     }
 
@@ -29,11 +25,8 @@ public class Game {
     }
 
     public boolean someSame(State player, Position position, Direction direction) {
-
-        //inicials
         if (!board.contains(position) || board.isEmpty(position)) return false;
         if (isSame(player, position)) return true;
-
 
         Position NowPos = position;
         while (true) {
@@ -45,18 +38,16 @@ public class Game {
 
     public boolean isReverseDirection(State player, Position position, Direction direction) {
         Position NextPos = direction.move(position);
+        
         if (!board.contains(NextPos) || !isOther(player,NextPos)) return false;
-
         return someSame(player,NextPos,direction);
     }
 
     public boolean[] directionsOfReverse(State player, Position position) {
         boolean[] direction = new boolean[Direction.ALL.length];
-
         for (int i = 0; i < Direction.ALL.length; i++) {
             direction[i] = isReverseDirection(player,position,Direction.ALL[i]);
         }
-
         return direction;
     }
 
@@ -65,14 +56,13 @@ public class Game {
             boolean b = bools[i];
             if (b) return false;
         }
-
         return true;
     }
 
     public boolean canPlayPosition(State player, Position position) {
         if(!board.isEmpty(position)) return false;
+        
         boolean[] directions = directionsOfReverse(player,position);
-
         return !allFalse(directions);
     }
 
@@ -85,7 +75,6 @@ public class Game {
                     return true;
             }
         }
-
         return false;
     }
 
@@ -102,7 +91,6 @@ public class Game {
     private void reverse(Position position, Direction direction) {
         Position NowPos = position;
         NowPos = direction.move(NowPos);
-
         while (!isSame(state,NowPos)) {
             board.reverse(NowPos);
             NowPos = direction.move(NowPos);
@@ -124,25 +112,26 @@ public class Game {
         } else {
             player2 = State.BLACK;
         }
-
         if (canPlay(player2)) {
             state = player2;
             return;
-        } else if(canPlay(state)) return; // jugar una altra vegada
+        } else if(canPlay(state)) return;
         state = State.FINISHED;
     }
 
     private State tryPlayer(State player) {
         if (canPlay(player))return player;
         else return State.FINISHED;
-
     }
 
 
     public void move(Position position) {
         if (!this.board.isEmpty(position)) return;
+        
         boolean[] directions = this.directionsOfReverse(this.state, position);
+        
         if (allFalse(directions)) return;
+        
         this.disk(position);
         this.reverse(position, directions);
         this.changeTurn();
