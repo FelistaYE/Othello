@@ -2,7 +2,7 @@ import acm.program.GraphicsProgram;
 import acm.program.ProgramMenuBar;
 import java.awt.event.MouseEvent;
 
-public class Reversi extends GraphicsProgram {
+public class Othello extends GraphicsProgram {
 
     public static final int APPLICATION_HEIGHT = 600;
     public static final int APPLICATION_WIDTH  = 600;
@@ -39,6 +39,6 @@ public class Reversi extends GraphicsProgram {
     }
 
     public static void main(String[] args) {
-        new Reversi().start(args);
+        new Othello().start(args);
     }
 }
