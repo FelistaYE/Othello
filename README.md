@@ -37,7 +37,7 @@ Place the acm.jar file in the `src` folder.
 
 # Configuration
 
-You can customize various aspects of the game by modifying constants in `Reversi.java`:
+You can customize various aspects of the game by modifying constants in `Othello.java`:
 
 - `APPLICATION_WIDTH` and `APPLICATION_HEIGHT`: Window size (default: 600x600)
 - `BOARD_PADDING`: Space around the board (default: 0.03)
