@@ -1,6 +1,6 @@
 # Description
 
-This project implements the Reversi board game, a strategy game for two players where the goal is to have more pieces of your color at the end of the game. Players place pieces on the board and capture opponent pieces by surrounding them in any direction (horizontal, vertical, or diagonal).
+This project implements the Othello board game, a strategy game for two players where the goal is to have more pieces of your color at the end of the game. Players place pieces on the board and capture opponent pieces by surrounding them in any direction (horizontal, vertical, or diagonal).
 
 # Othello Rules
 
