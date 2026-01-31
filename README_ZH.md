@@ -14,12 +14,12 @@
 8. 拥有更多己方颜色棋子的玩家获胜。
 
 
-## 🚀 系统要求
+# 系统要求
 
 - **Java 开发工具包（JDK）** 11 或更高版本
 - **ACM Java 库** (`acm.jar`) - **必需** ⚠️
 
-## 📦 安装步骤
+# 安装步骤
 
 ### 1. 克隆仓库
 ```bash
@@ -38,7 +38,7 @@ cd Othello
 
 # 配置选项
 
-您可以通过修改 `Reversi.java` 中的常量来自定义游戏的各个方面：
+您可以通过修改 `Othello.java` 中的常量来自定义游戏的各个方面：
 
 - `APPLICATION_WIDTH` 和 `APPLICATION_HEIGHT`：窗口大小（默认：600x600）
 - `BOARD_PADDING`：棋盘周围的空间（默认：0.03）
