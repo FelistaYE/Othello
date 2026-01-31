@@ -51,5 +51,5 @@ cd Othello
 
 #其他语言
 
-- [English](README_EN.md)
+- [English](README.md)
 
